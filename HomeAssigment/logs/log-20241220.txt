@@ -1,0 +1,98 @@
+2024-12-20 02:34:36.476 -05:00 [INF] Starting up the application
+2024-12-20 02:34:42.669 -05:00 [INF] Now listening on: http://localhost:5127
+2024-12-20 02:34:42.675 -05:00 [INF] Application started. Press Ctrl+C to shut down.
+2024-12-20 02:34:42.676 -05:00 [INF] Hosting environment: Development
+2024-12-20 02:34:42.677 -05:00 [INF] Content root path: C:\devProject\TestInterviewVrtx\HomeAssigment
+2024-12-20 02:34:45.449 -05:00 [INF] Request starting HTTP/1.1 GET http://localhost:5127/swagger/index.html - null null
+2024-12-20 02:34:46.628 -05:00 [INF] Request finished HTTP/1.1 GET http://localhost:5127/swagger/index.html - 200 null text/html;charset=utf-8 1236.3005ms
+2024-12-20 02:34:46.760 -05:00 [INF] Request starting HTTP/1.1 GET http://localhost:5127/swagger/index.js - null null
+2024-12-20 02:34:46.663 -05:00 [INF] Request starting HTTP/1.1 GET http://localhost:5127/_framework/aspnetcore-browser-refresh.js - null null
+2024-12-20 02:34:46.935 -05:00 [INF] Request starting HTTP/1.1 GET http://localhost:5127/_vs/browserLink - null null
+2024-12-20 02:34:47.074 -05:00 [INF] Request starting HTTP/1.1 GET http://localhost:5127/swagger/index.css - null null
+2024-12-20 02:34:47.079 -05:00 [INF] Request finished HTTP/1.1 GET http://localhost:5127/swagger/index.js - 200 null application/javascript;charset=utf-8 318.7363ms
+2024-12-20 02:34:47.089 -05:00 [INF] Request finished HTTP/1.1 GET http://localhost:5127/_framework/aspnetcore-browser-refresh.js - 200 13762 application/javascript; charset=utf-8 440.9233ms
+2024-12-20 02:34:47.171 -05:00 [INF] The file /index.css was not modified
+2024-12-20 02:34:47.177 -05:00 [INF] Request finished HTTP/1.1 GET http://localhost:5127/swagger/index.css - 304 null text/css 103.5316ms
+2024-12-20 02:34:47.915 -05:00 [INF] Request finished HTTP/1.1 GET http://localhost:5127/_vs/browserLink - 200 null text/javascript; charset=UTF-8 980.8535ms
+2024-12-20 02:34:48.255 -05:00 [INF] Request starting HTTP/1.1 GET http://localhost:5127/swagger/v1/swagger.json - null null
+2024-12-20 02:34:48.623 -05:00 [INF] Request finished HTTP/1.1 GET http://localhost:5127/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 367.9218ms
+2024-12-20 02:34:51.404 -05:00 [INF] Request starting HTTP/1.1 GET http://localhost:5127/_framework/aspnetcore-browser-refresh.js - null null
+2024-12-20 02:34:51.409 -05:00 [INF] Request finished HTTP/1.1 GET http://localhost:5127/_framework/aspnetcore-browser-refresh.js - 200 13762 application/javascript; charset=utf-8 4.9699ms
+2024-12-20 02:34:52.330 -05:00 [INF] Request starting HTTP/1.1 GET http://localhost:5127/swagger/v1/swagger.json - null null
+2024-12-20 02:34:52.351 -05:00 [INF] Request finished HTTP/1.1 GET http://localhost:5127/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 20.6999ms
+2024-12-20 02:34:57.276 -05:00 [INF] Request starting HTTP/1.1 GET http://localhost:5127/api/Customer/GetCustomers - null null
+2024-12-20 02:34:57.294 -05:00 [WRN] Failed to determine the https port for redirect.
+2024-12-20 02:34:57.352 -05:00 [INF] Executing endpoint 'HomeAssigment.Controllers.CustomerController.GetCustomers (HomeAssigment)'
+2024-12-20 02:34:57.396 -05:00 [INF] Route matched with {action = "GetCustomers", controller = "Customer"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[System.Collections.Generic.List`1[HomeAssigment.Models.Customer]]] GetCustomers() on controller HomeAssigment.Controllers.CustomerController (HomeAssigment).
+2024-12-20 02:34:58.572 -05:00 [INF] Executing action method HomeAssigment.Controllers.CustomerController.GetCustomers (HomeAssigment) - Validation state: "Valid"
+2024-12-20 02:34:58.575 -05:00 [INF] CustomerController-GetCustomers-Started...
+2024-12-20 02:34:58.577 -05:00 [INF] CustomerService-GetAllCustomer-Started
+2024-12-20 02:35:00.140 -05:00 [INF] Executed DbCommand (41ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT c.id, c.creationdate, c.emailaddress, c.firstname, c.lastname, c.middlename, c.phonenumber, c.updateddate
+FROM customers AS c
+2024-12-20 02:35:00.287 -05:00 [INF] CustomerService-GetAllCustomer-Ended.CountCustomers:2
+2024-12-20 02:35:00.289 -05:00 [INF] CustomerController-GetCustomers-Ended...
+2024-12-20 02:35:00.294 -05:00 [INF] Executed action method HomeAssigment.Controllers.CustomerController.GetCustomers (HomeAssigment), returned result Microsoft.AspNetCore.Mvc.OkObjectResult in 1717.4425ms.
+2024-12-20 02:35:00.311 -05:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[HomeAssigment.Models.Customer, HomeAssigment, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2024-12-20 02:35:00.387 -05:00 [INF] Executed action HomeAssigment.Controllers.CustomerController.GetCustomers (HomeAssigment) in 2982.7448ms
+2024-12-20 02:35:00.390 -05:00 [INF] Executed endpoint 'HomeAssigment.Controllers.CustomerController.GetCustomers (HomeAssigment)'
+2024-12-20 02:35:00.403 -05:00 [INF] HTTP GET /api/Customer/GetCustomers responded 200 in 3105.7133 ms
+2024-12-20 02:35:00.418 -05:00 [INF] Request finished HTTP/1.1 GET http://localhost:5127/api/Customer/GetCustomers - 200 null application/json; charset=utf-8 3142.517ms
+2024-12-20 02:35:21.103 -05:00 [INF] Starting up the application
+2024-12-20 02:35:23.404 -05:00 [INF] Now listening on: http://localhost:5127
+2024-12-20 02:35:23.412 -05:00 [INF] Application started. Press Ctrl+C to shut down.
+2024-12-20 02:35:23.416 -05:00 [INF] Hosting environment: Development
+2024-12-20 02:35:23.417 -05:00 [INF] Content root path: C:\devProject\TestInterviewVrtx\HomeAssigment
+2024-12-20 02:35:29.609 -05:00 [INF] Request starting HTTP/1.1 GET http://localhost:5127/swagger/index.html - null null
+2024-12-20 02:35:31.289 -05:00 [INF] Request starting HTTP/1.1 GET http://localhost:5127/_framework/aspnetcore-browser-refresh.js - null null
+2024-12-20 02:35:31.296 -05:00 [INF] Request starting HTTP/1.1 GET http://localhost:5127/swagger/index.js - null null
+2024-12-20 02:35:31.306 -05:00 [INF] Request finished HTTP/1.1 GET http://localhost:5127/swagger/index.html - 200 null text/html;charset=utf-8 1733.2007ms
+2024-12-20 02:35:31.323 -05:00 [INF] Request starting HTTP/1.1 GET http://localhost:5127/_vs/browserLink - null null
+2024-12-20 02:35:31.341 -05:00 [INF] Request finished HTTP/1.1 GET http://localhost:5127/_framework/aspnetcore-browser-refresh.js - 200 13762 application/javascript; charset=utf-8 53.1884ms
+2024-12-20 02:35:31.355 -05:00 [INF] Request finished HTTP/1.1 GET http://localhost:5127/swagger/index.js - 200 null application/javascript;charset=utf-8 59.7031ms
+2024-12-20 02:35:31.637 -05:00 [INF] Request finished HTTP/1.1 GET http://localhost:5127/_vs/browserLink - 200 null text/javascript; charset=UTF-8 313.6152ms
+2024-12-20 02:35:31.769 -05:00 [INF] Request starting HTTP/1.1 GET http://localhost:5127/swagger/v1/swagger.json - null null
+2024-12-20 02:35:32.182 -05:00 [INF] Request finished HTTP/1.1 GET http://localhost:5127/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 413.2038ms
+2024-12-20 02:35:35.512 -05:00 [INF] Request starting HTTP/1.1 GET http://localhost:5127/_framework/aspnetcore-browser-refresh.js - null null
+2024-12-20 02:35:35.519 -05:00 [INF] Request finished HTTP/1.1 GET http://localhost:5127/_framework/aspnetcore-browser-refresh.js - 200 13762 application/javascript; charset=utf-8 6.6989ms
+2024-12-20 02:35:39.386 -05:00 [INF] Request starting HTTP/1.1 GET http://localhost:5127/swagger/v1/swagger.json - null null
+2024-12-20 02:35:39.557 -05:00 [INF] Request finished HTTP/1.1 GET http://localhost:5127/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 172.3202ms
+2024-12-20 02:54:05.393 -05:00 [INF] Starting up the application
+2024-12-20 02:54:20.688 -05:00 [INF] Now listening on: http://localhost:5127
+2024-12-20 02:54:20.700 -05:00 [INF] Application started. Press Ctrl+C to shut down.
+2024-12-20 02:54:20.709 -05:00 [INF] Hosting environment: Development
+2024-12-20 02:54:20.717 -05:00 [INF] Content root path: C:\devProject\customerAPI\HomeAssigment
+2024-12-20 02:54:26.661 -05:00 [INF] Request starting HTTP/1.1 GET http://localhost:5127/swagger/index.html - null null
+2024-12-20 02:54:27.770 -05:00 [INF] Request finished HTTP/1.1 GET http://localhost:5127/swagger/index.html - 200 null text/html;charset=utf-8 1149.2578ms
+2024-12-20 02:54:27.850 -05:00 [INF] Request starting HTTP/1.1 GET http://localhost:5127/_framework/aspnetcore-browser-refresh.js - null null
+2024-12-20 02:54:28.020 -05:00 [INF] Request starting HTTP/1.1 GET http://localhost:5127/swagger/index.js - null null
+2024-12-20 02:54:28.024 -05:00 [INF] Request finished HTTP/1.1 GET http://localhost:5127/_framework/aspnetcore-browser-refresh.js - 200 13762 application/javascript; charset=utf-8 174.3039ms
+2024-12-20 02:54:28.588 -05:00 [INF] Request starting HTTP/1.1 GET http://localhost:5127/_vs/browserLink - null null
+2024-12-20 02:54:28.588 -05:00 [INF] Request finished HTTP/1.1 GET http://localhost:5127/swagger/index.js - 200 null application/javascript;charset=utf-8 567.7095ms
+2024-12-20 02:54:29.651 -05:00 [INF] Request finished HTTP/1.1 GET http://localhost:5127/_vs/browserLink - 200 null text/javascript; charset=UTF-8 1062.9058ms
+2024-12-20 02:54:31.979 -05:00 [INF] Request starting HTTP/1.1 GET http://localhost:5127/swagger/v1/swagger.json - null null
+2024-12-20 02:54:32.547 -05:00 [INF] Request finished HTTP/1.1 GET http://localhost:5127/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 567.8331ms
+2024-12-20 02:54:34.583 -05:00 [INF] Request starting HTTP/1.1 GET http://localhost:5127/_framework/aspnetcore-browser-refresh.js - null null
+2024-12-20 02:54:34.598 -05:00 [INF] Request finished HTTP/1.1 GET http://localhost:5127/_framework/aspnetcore-browser-refresh.js - 200 13762 application/javascript; charset=utf-8 14.4969ms
+2024-12-20 02:54:45.079 -05:00 [INF] Request starting HTTP/1.1 GET http://localhost:5127/api/Customer/GetCustomers - null null
+2024-12-20 02:54:45.090 -05:00 [WRN] Failed to determine the https port for redirect.
+2024-12-20 02:54:45.163 -05:00 [INF] Executing endpoint 'HomeAssigment.Controllers.CustomerController.GetCustomers (HomeAssigment)'
+2024-12-20 02:54:45.254 -05:00 [INF] Route matched with {action = "GetCustomers", controller = "Customer"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[System.Collections.Generic.List`1[HomeAssigment.Models.Customer]]] GetCustomers() on controller HomeAssigment.Controllers.CustomerController (HomeAssigment).
+2024-12-20 02:54:46.908 -05:00 [INF] Executing action method HomeAssigment.Controllers.CustomerController.GetCustomers (HomeAssigment) - Validation state: "Valid"
+2024-12-20 02:54:46.913 -05:00 [INF] CustomerController-GetCustomers-Started...
+2024-12-20 02:54:46.916 -05:00 [INF] CustomerService-GetAllCustomer-Started
+2024-12-20 02:54:58.747 -05:00 [INF] Executed DbCommand (39ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT c.id, c.creationdate, c.emailaddress, c.firstname, c.lastname, c.middlename, c.phonenumber, c.updateddate
+FROM customers AS c
+2024-12-20 02:54:59.014 -05:00 [INF] CustomerService-GetAllCustomer-Ended.CountCustomers:2
+2024-12-20 02:54:59.017 -05:00 [INF] CustomerController-GetCustomers-Ended...
+2024-12-20 02:54:59.029 -05:00 [INF] Executed action method HomeAssigment.Controllers.CustomerController.GetCustomers (HomeAssigment), returned result Microsoft.AspNetCore.Mvc.OkObjectResult in 12111.9029ms.
+2024-12-20 02:54:59.048 -05:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[HomeAssigment.Models.Customer, HomeAssigment, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2024-12-20 02:54:59.922 -05:00 [INF] Executed action HomeAssigment.Controllers.CustomerController.GetCustomers (HomeAssigment) in 14653.8684ms
+2024-12-20 02:54:59.930 -05:00 [INF] Executed endpoint 'HomeAssigment.Controllers.CustomerController.GetCustomers (HomeAssigment)'
+2024-12-20 02:54:59.946 -05:00 [INF] HTTP GET /api/Customer/GetCustomers responded 200 in 14843.9283 ms
+2024-12-20 02:54:59.964 -05:00 [INF] Request finished HTTP/1.1 GET http://localhost:5127/api/Customer/GetCustomers - 200 null application/json; charset=utf-8 14884.6958ms
+2024-12-20 02:55:11.112 -05:00 [INF] Request starting HTTP/1.1 GET http://localhost:5127/_framework/aspnetcore-browser-refresh.js - null null
+2024-12-20 02:55:11.388 -05:00 [INF] Request finished HTTP/1.1 GET http://localhost:5127/_framework/aspnetcore-browser-refresh.js - 200 13762 application/javascript; charset=utf-8 275.7112ms
+2024-12-20 02:55:11.988 -05:00 [INF] Request starting HTTP/1.1 GET http://localhost:5127/swagger/v1/swagger.json - null null
+2024-12-20 02:55:12.039 -05:00 [INF] Request finished HTTP/1.1 GET http://localhost:5127/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 51.1521ms

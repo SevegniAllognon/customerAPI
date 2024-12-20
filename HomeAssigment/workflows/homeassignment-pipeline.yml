@@ -1,0 +1,86 @@
+﻿name:  CI/CD-HomeAssignment-Pipeline
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+
+jobs:
+  build-and-test:
+    name: Build and Test HomeAssignment  
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout Code
+      uses: actions/checkout@v3
+
+    - name: Set up .NET
+      uses: actions/setup-dotnet@v3
+      with:
+        dotnet-version: 8.0.x
+
+    - name: Restore Dependencies
+      run: dotnet restore
+
+    - name: Static Code Analysis
+      run: dotnet build --configuration Release /p:TreatWarningsAsErrors=true
+
+    - name: Build Solution
+      run: dotnet build --configuration Release --no-restore
+
+    - name: Run Unit Tests
+      run: dotnet test CustomerServiceUnitTests --no-build --configuration Release
+
+    - name: Run Integration Tests
+      run: dotnet test CustomerAPIIntegrationTests --no-build --configuration Release
+
+    - name: Publish Artifacts
+      run: dotnet publish --configuration Release --output ./publish
+
+    - name: Upload Publish Artifacts
+      uses: actions/upload-artifact@v3
+      with:
+          name: homeassignment-publish
+          path: ./publish
+
+  deploy-dev:
+    name: Deploy to Development
+    runs-on: ubuntu-latest
+    needs: build
+
+    steps:
+      - name: Download Publish Artifact
+        uses: actions/download-artifact@v3
+        with:
+          name: homeassignment-publish
+          path: ./publish
+
+      - name: Deploy to Azure App Service
+        uses: azure/webapps-deploy@v2
+        with:
+          app-name: 'homeassignment'
+          publish-profile: ${{ secrets.AZURE_PUBLISH_PROFILE }}
+          package: ./publish
+
+  deploy-prod:
+    name: Deploy to Production
+    runs-on: ubuntu-latest
+    needs: deploy-dev
+    environment:
+      name: production
+      url: https://homeaasignment:7127
+
+    steps:
+      - name: Download Publish Artifact
+        uses: actions/download-artifact@v3
+        with:
+          name: homeassignment-publish
+          path: ./publish
+
+      - name: Deploy to Azure App Service (Production)
+        uses: azure/webapps-deploy@v2
+        with:
+          app-name: 'homeassignment'
+          publish-profile: ${{ secrets.AZURE_PUBLISH_PROFILE }}
+          package: ./publish
